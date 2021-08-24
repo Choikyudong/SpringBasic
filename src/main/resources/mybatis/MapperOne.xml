@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="SpringBasic.mybatis.mapper.MapperOne">
+
+    <select id="selectAll" resultType="MybatisDomain" parameterType="MybatisDomain">
+        select *
+        from mybatis;
+    </select>
+
+    <select id="selectOne" resultType="String" parameterType="long">
+        select email
+        from mybatis
+        where id = #{id}
+    </select>
+
+    <insert id="saveData" parameterType="MybatisDomain">
+        insert into mybatis(email, password, name, phone)
+        values (#{email}, #{password}, #{name}, #{phone});
+    </insert>
+
+    <update id="updateData" parameterType="String">
+        update mybatis
+        set password = #{password}
+        where email = #{email}
+    </update>
+
+    <delete id="deleteData" parameterType="String">
+        delete
+        from mybatis
+        where email = #{email};
+    </delete>
+
+</mapper>

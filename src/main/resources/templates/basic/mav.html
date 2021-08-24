@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 th:text="${mav}"></h1>
+    <h3 th:text="${data}"></h3>
+    <p>ModelAndView은 데이터와 이동페이지를 동시에 담아서<br/>
+        전송하는 방식으로 페이지를 위치를 전송하는 방법은<br />
+        model.setViewName{"전체 주소"}로 입력한다.</p>
+</body>
+</html>
